@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+        <head lang="en">
+            <title>Test 1</title>
+        </head>
+
+        <body>
+            <p id="test">Shown here</p>
+            <p></p>
+            <input id="input1" type="number">Please input a number 1-10</input>
+            <p></p>
+            <button type="button" onclick="checkInput1()">Submit</button>
+            <p></p>
+            <button type="button" onclick="showDate()">Display Date & Time</button>
+            <p></p>
+            <button type = "button" onclick = "changeFont1()">Change font size 1</button>
+            <br />
+            <button type = "button" onclick = "alert1()">Trigger an alert message</button>
+            <br />
+            <button type = "button" onclick = "write1()">Trigger an document write message</button>
+            <br />
+            <button type = "button" onclick = "unloadAllJS()">Unload JavaScript functions</button>
+
+
+            <script language="javascript" type="text/javascript" id="for_testing">
+                <!-- hide
+
+                function showDate(){
+                    document.getElementById('test').innerHTML = Date();
+                }
+
+                function changeFont1(){
+                    document.getElementById('test').style.fontSize = "25px";
+                    document.getElementById('test').innerHTML = window.globalVar1;
+
+                }
+                function checkInput1(){
+                    var x, output;
+                    x = document.getElementById('input1').value;
+                    if(isNaN(x) || x <1 || x >10){
+                        output = 'Not a valid input';
+                    }else{
+                        output = "A valid input";
+                    }
+                    document.getElementById('test').innerHTML = output;
+
+                }
+                function alert1(){
+                    globalVar1 = 'For testing';
+                    window.alert("here is a alert message");
+                }
+                function write1(){
+                    document.write('here is a document write message <br />');
+
+                }
+
+                //------------------------------
+                function unloadJS(scriptName) {
+                    var head = document.getElementsByTagName('head').item(0);
+                    var js = document.getElementById(scriptName);
+                    js.parentNode.removeChild(js);
+                }
+                function unloadAllJS() {
+                    var jsArray = new Array();
+                    jsArray = document.getElementsByTagName('script');
+                    for (i = 0; i < jsArray.length; i++){
+                        if (jsArray[i].id){
+                            unloadJS(jsArray[i].id)
+                        }else{
+                            jsArray[i].parentNode.removeChild(jsArray[i]);
+                        }
+                    }
+                }
+                //--------------------------
+                -->
+            </script>
+            <noscript>
+                <h2>JavaScript need to be enabled here!</h2>
+            </noscript>
+
+        </body>
+</html>
