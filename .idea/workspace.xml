@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="T_JS_1.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JS_Exercise/T_JS_1.html">
+      <file leaf-file-name="T_JS_2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS_Exercise/T_JS_2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4364303" vertical-offset="0" max-vertical-offset="1581">
-              <caret line="21" column="82" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+            <state vertical-scroll-proportion="0.16870415" vertical-offset="151" max-vertical-offset="1020">
+              <caret line="17" column="144" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,6 +43,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/JS_Exercise/T_JS_1.html" />
+        <option value="$PROJECT_DIR$/JS_Exercise/T_JS_2.html" />
       </list>
     </option>
   </component>
@@ -122,9 +123,15 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.T_JS_1.html">
-    <configuration default="false" name="T_JS_1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hello-world/JS_Exercise/T_JS_1.html">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\hello-world\JS_Exercise" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.T_JS_2.html">
+    <configuration default="false" name="T_JS_2.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hello-world/JS_Exercise/T_JS_2.html">
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
@@ -162,11 +169,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.T_JS_1.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.T_JS_2.html" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.T_JS_1.html" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.T_JS_2.html" />
       </list>
     </recent_temporary>
   </component>
@@ -227,8 +234,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/JS_Exercise/T_JS_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4364303" vertical-offset="0" max-vertical-offset="1581">
-          <caret line="21" column="82" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
+        <state vertical-scroll-proportion="-20.26923" vertical-offset="0" max-vertical-offset="1581">
+          <caret line="31" column="90" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS_Exercise/T_JS_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16870415" vertical-offset="151" max-vertical-offset="1020">
+          <caret line="17" column="144" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
