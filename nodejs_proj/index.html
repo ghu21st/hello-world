@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Test 1</title>
+</head>
+
+<body>
+<p id="test">Shown here...2 </p>
+<p></p>
+<input id="input1" type="number">Please input a number 1-10</input>
+<br />
+<input id="input2" type="string">Please input a string</input>
+<p></p>
+<button type="button" onclick="checkInput1()">Submit a test</button>
+<p></p>
+<button type="button" onclick="reverseString1()">Reverse input string</button>
+<p></p>
+<button type="button" onclick="showDate()">Display Date & Time for test</button>
+<p></p>
+<button type = "button" onclick = "changeFont1()">Change font size test</button>
+<br />
+<button type = "button" onclick = "alert1()">Write an alert for test</button>
+<br />
+<button type = "button" onclick = "write1()">Document write message</button>
+<br />
+<button type = "button" onclick = "unloadAllJS()">Unload JavaScript functions</button>
+<p></p>
+<button type = "button" onclick = "test1()">Test1</button>
+
+
+<script language="javascript" type="text/javascript" id="for_testing">
+//test1 
+    function test1(){
+        var foo = 'hello';
+        (function(){
+            var bar = 'world';
+            alert (foo + bar);
+        })();
+       // alert(foo+bar);
+        
+        var s1 = [];
+        s1.push(1);
+        s1.push(2);
+        alert(s1.length);
+    }
+
+
+
+
+// function example 
+    function showDate(){
+        document.getElementById('test').innerHTML = Date();
+    }
+    function changeFont1(){
+        var testElement = document.getElementById('test');
+        testElement.style.fontSize = "25px";
+        testElement.innerHTML = window.globalVar1;
+    }
+    function checkInput1(){
+        var x, output; var inputElement;
+        inputElement = document.getElementById('input1');
+        x = inputElement.value;
+        if(isNaN(x) || x <1 || x >13){
+            output = 'Not a valid input';
+            inputElement.style.backgroundColor = 'red';
+        }else{
+            output = "A valid input";
+            inputElement.style.backgroundColor = 'green';
+        }
+        document.getElementById('test').innerHTML = output;
+    }
+    function reverseString1(){
+        var strInput, strOutput;
+        strInput = document.getElementById('input2').value;
+        strOutput = strInput.split("").reverse().join("");
+        document.getElementById('test').innerHTML = strOutput;
+    }
+    function alert1(){
+        var globalVar1 = 'For testing';
+        window.alert("here is a alert message");
+    }
+    function write1(){
+        document.write('here is a document write message <br />');
+    }
+    //------------------------------
+    function unloadJS(scriptName) {
+        var head = document.getElementsByTagName('head').item(0);
+        var js = document.getElementById(scriptName);
+        js.parentNode.removeChild(js);
+    }
+    function unloadAllJS() {
+        var jsArray = [], i;
+        jsArray = document.getElementsByTagName('script');
+        for (i = 0; i < jsArray.length; i++){
+            if (jsArray[i].id){
+                unloadJS(jsArray[i].id)
+            }else{
+                jsArray[i].parentNode.removeChild(jsArray[i]);
+            }
+        }
+    }
+ </script>
+             <noscript>
+                <h2>JavaScript need to be enabled here!</h2>
+            </noscript>
+</body>
+</html>
