@@ -24,9 +24,16 @@
 <button type = "button" onclick = "write1()">Document write message</button>
 <br />
 <button type = "button" onclick = "unloadAllJS()">Unload JavaScript functions</button>
-<p></p>
+<br />
+<button type = "button" onclick = "this.innerHTML=Date()">Date on this button by click</button>
+<br />
+<button type = "button" onmouseover = "this.innerHTML=Date()">Date on this button by moveover</button>
+<br />
 <button type = "button" onclick = "test1()">Test1</button>
 
+<p>Please input a string, find locate where 'locate' occurs!</p>
+<button type = "button" onclick = "str_test1()">String Test 1</button>
+<p id='test_msg'>For string test result shown here... </p>
 
 <script language="javascript" type="text/javascript" id="for_testing">
 //test1 
@@ -44,7 +51,17 @@
         alert(s1.length);
     }
 
-
+    function str_test1(){
+        var strInput, pos, outputStr;
+        strInput = document.getElementById('input2').value;
+        pos = strInput.search('locate');
+        outputStr = 'search \'locate\' ' + pos + '<br />';
+        pos = strInput.indexOf('locate');
+        outputStr += 'indexOf \'locate\' ' + pos + '<br />';
+        pos = strInput.lastIndexOf('locate');
+        outputStr += 'lastIndexOf \'locate\' ' + pos + '<br />';
+        document.getElementById('test_msg').innerHTML = outputStr;
+    }
 
 
 // function example 
@@ -80,7 +97,7 @@
         window.alert("here is a alert message");
     }
     function write1(){
-        document.write('here is a document write message <br />');
+        document.write('<p>here is a document write message</p>');
     }
     //------------------------------
     function unloadJS(scriptName) {
