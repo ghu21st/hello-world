@@ -17,7 +17,7 @@ var test_location = TestConfig.options.test_location;              //test base f
 var selenium_server = TestConfig.options.selenium_server;
 var test_url= TestConfig.options.test_Url;
 
-var testlog_location = test_location + "../test_outputs";        //test log folder
+var testlog_location = test_location + "../test/test_outputs";        //test log folder
 var logFile = testlog_location + '/' + case_ID + '.log';    //test log file name
 var logger;
 
@@ -66,7 +66,7 @@ describe('TC903: Test send input model order change  with Protractor on AngularJ
                 })
             ]
         });
-        logger.info('Test started and logging at'+ logFile);
+        //logger.info('Test started and logging at'+ logFile);
         //logger.extend(console); //log everything from console to logger(save to log file)
 
         //using QA browser driver wrapper to get protractor driver

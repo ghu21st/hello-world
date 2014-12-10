@@ -1,0 +1,11 @@
+info: 
+Test passed! Output string:
+
+wait 1 second for server
+
+Test URL: http://www.angularjs.org
+Test web page title: AngularJS — Superheroic JavaScript MVW Framework
+Set model youName 
+Get binding yourName return text:Hello This is a QA test!
+wait 1 second for server
+
