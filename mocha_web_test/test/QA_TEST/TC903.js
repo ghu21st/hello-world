@@ -66,7 +66,7 @@ describe('TC903: Test send input model order change  with Protractor on AngularJ
                 })
             ]
         });
-        //logger.info('Test started and logging at'+ logFile);
+        logger.info('Test started and logging at'+ logFile);
         //logger.extend(console); //log everything from console to logger(save to log file)
 
         //using QA browser driver wrapper to get protractor driver
@@ -189,13 +189,13 @@ describe('TC903: Test send input model order change  with Protractor on AngularJ
                 }, 1000);
             },
             function(callback){
-               element1 = ptor.findElement(protractor.By.select('orderProp'));
+               element1 = ptor.element(protractor.By.model('orderProp'));
                 element1.click().then(function(){
-                    element2 = ptor.findElement(protractor.By.css('option[value="-age"]'));
+                    element2 = ptor.element(protractor.By.css('option[value="-age"]'));
                     //element2.sendKeys('Newest').then(function(){
                     //element2.sendKeys('age').then(function(){
                     element2.click().then(function(){
-                        element3 = ptor.element(protractor.By.selectedOption('orderProp'));
+                        element3 = ptor.element(protractor.By.model('orderProp'));
                         element3.getText().then(function(txt){
                             output_msg = '\nGet binding order return text:' + txt;
                             output_string += output_msg;
@@ -219,13 +219,13 @@ describe('TC903: Test send input model order change  with Protractor on AngularJ
                 }, 2000);
             },
             function(callback){
-                //element1 = ptor.findElement(protractor.By.model('orderProp'));
-                element1 = ptor.element(protractor.By.select('orderProp')).click();
+                element1 = ptor.findElement(protractor.By.model('orderProp'));
+                //element1 = ptor.element(protractor.By.css('.orderProp')).click();
                 element2 = ptor.findElement(protractor.By.css('option[value="name"]')).click();
                     //element2.sendKeys('Alphabetical').then(function(){
                     //element2.sendKeys('name').then(function(){
 //                    element2.click().then(function(){
-                element3 = ptor.element(protractor.By.selectedOption('orderProp'));
+                element3 = ptor.element(protractor.By.model('orderProp'));
                 element3.getText().then(function(txt){
                     output_msg = '\nGet binding order return text:' + txt;
                     output_string += output_msg;
@@ -247,11 +247,11 @@ describe('TC903: Test send input model order change  with Protractor on AngularJ
             },
             function(callback){
                 //var element = ptor.element(protractor.By.model('orderProp'));
-                element1 = ptor.element(protractor.By.select('orderProp')).click();
+                element1 = ptor.element(protractor.By.model('orderProp')).click();
                 element2 = ptor.findElement(protractor.By.css('option[value="age"]')).click();
                     //element2.sendKeys('Oldest').then(function(){
                     //element2.sendKeys('-age').then(function(){
-                element3 = ptor.element(protractor.By.selectedOption('orderProp'));
+                element3 = ptor.element(protractor.By.model('orderProp'));
                 element3.getText().then(function(txt){
                     output_msg = '\nGet binding order return text:' + txt;
                     output_string += output_msg;

@@ -234,8 +234,8 @@ describe('TC905: Test with ng-view on QA sample app to load and compile correct 
                       callback(null, 7)
               });*/
                 //test on ng-repeat  ##############
-                element1 = ptor.element(protractor.By.className('phones'))
-                    .findElements(protractor.By.repeater('phone in phones')).then(function(arr){
+                element1 = ptor.element(protractor.By.css('.phones'))
+                    .all(protractor.By.repeater('phone in phones')).then(function(arr){
                         arr[0].evaluate('phone.name').then(function(phone_name){
                             element2 = ptor.element(protractor.By.partialLinkText(phone_name));
                             element2.click().then(function(){
@@ -247,7 +247,7 @@ describe('TC905: Test with ng-view on QA sample app to load and compile correct 
             },
             function(callback){
                 //wait for next page ############
-                driver.wait(function(){
+                ptor.driver.wait(function(){
                       return ptor.isElementPresent(protractor.By.className('specs'));
                 }, 8000).then(function(b){
                         if(b){
