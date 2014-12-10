@@ -1,0 +1,9 @@
+info: 
+Test passed! Output string:
+
+wait 1 second for server
+
+Test URL: http://localhost:8080/app/index.html
+web page title: Google Phone Gallery:
+wait 1 second for server
+
