@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+<button ng-click = "hello('Gang')">Hello1</button>
+<button ng-click = "hello('')">Hello2</button>
+
+<h1>Phone name: {{phone.name}}</h1>
+<p>Phone description: {{phone.description}}</p>
+
+<img ng-src = "{{mainImageUrl}}" class = "phone">
+
+
+<ul class="phone-thumbs">
+    <li ng-repeat = "img in phone.images">
+        <img ng-src = "{{img}}" ng-click="setImage(img)">
+    </li>
+</ul>
+
+<!-- Test 7 ---
+
+<ul class="phone-thumbs">
+    <li ng-repeat="img in phone.images">
+        <img ng-src="{{img}}">
+    </li>
+</ul>
+-->
+
+<ul class="specs">
+    <li>
+        <span>Availability & Networks</span>
+        <dl>
+                <dt>Availability</dt>
+                <dd ng-repeat="availability in phone.availability">{{phone.availability}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Connectivity</span>
+        <dl>
+            <dt>Infrared</dt>
+            <dd>{{phone.connectivity.infrared | checkmark}}</dd>
+            <dt>GPS</dt>
+            <dd>{{phone.connectivity.gps | checkmark}}</dd>
+        </dl>
+        <span>Additional Features</span>
+        <dd>{{phone.additionalFeatures}}</dd>
+    </li>
+</ul>
+
+<p></p>
+<p>Phone detail (JSON): {{phone | json}}</p>
+
+
+</body>
+</html>

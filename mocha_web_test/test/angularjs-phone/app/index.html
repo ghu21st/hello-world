@@ -1,0 +1,93 @@
+<!doctype html>
+<!--html lang="en" ng-app="phonecatApp" ng-controller="PhoneListCtrl"-->
+<html lang="en" ng-app="phonecatApp">
+
+<head>
+  <meta charset="utf-8">
+  <title ng-bind-template="Google Phone Gallery: {{query}}">Google Phone Gallery</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="js/controllers.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services.js"></script>
+
+</head>
+
+
+<!-- Test step 7 -->
+<body>
+<div id="Main" ng-app="phonecatApp">
+    <div ng-view></div>
+</div>
+
+
+<!-- Test step 4 & 5 & 6 -->
+<!--body ng-controller="PhoneListCtrl">
+
+  <div class="container-fluid">
+      <div class="row-fluid">
+          <div class="span">
+              Search (list first 5 items): <input ng-model="query">
+              Sort by:
+              <select ng-model="orderProp">
+                  <option value="name">Alphabetical</option>
+                  <option value="age">Newest</option>
+                  <option value="-age">Oldest</option>
+              </select>
+              <div id="status">Current query: {{query}}, Ordered by: {{orderProp}}</div>
+
+          </div>
+          <div class="span20">
+              <ul class="phones">
+                  <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+                      <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+                      <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                      <a href="hello('haha...')">hello</a>
+                      <p>{{phone.snippet}}</p>
+
+                  </li>
+              </ul>
+
+              <p></p>
+              <p>Phone List:</p><p>{{phones | json}}</p>
+          </div>
+      </div>
+  </div-->
+
+<!-- Test step 9 -->
+<p> More filter testing: </p>
+<p>{{"LOWER case string" | lowercase}}</p>
+<p>{{ {foo: "bar", baz: 23} | json}}</p>
+<p>{{1304375948024 | date }}</p>
+<p>{{1304375948024 | date:"MM/dd/yy @ hh:mma"}}</p>
+
+
+  <!-- Test step 2
+  <body ng-controller="PhoneListCtrl">
+
+    <ul>
+        <li ng-repeat="phone in phones">
+            {{phone.name}}
+            <p>{{phone.snippet}}</p>
+        </li>
+
+    </ul>
+
+    <p>Default phones list length: {{phones.length}}</p>
+
+    <p>Hello {{name}}!</p>
+
+    <table border="1">
+        <tr><th>row number</th></tr>
+        <tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
+    </table>
+  -->
+
+</body>
+</html>

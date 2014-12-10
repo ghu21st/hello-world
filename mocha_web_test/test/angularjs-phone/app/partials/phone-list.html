@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span">
+            Search (list first 5 items): <input ng-model="query">
+            Sort by:
+            <select ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="age">Newest</option>
+                <option value="-age">Oldest</option>
+            </select>
+
+        </div>
+        <div class="span20">
+            <ul class="phones">
+                <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+                    <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+                    <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+                    <p>{{phone.snippet}}</p>
+
+                </li>
+            </ul>
+
+            <div id="status">Current filter: {{query}}, Ordered by: {{orderProp}}</div>
+            <p></p>
+            <p>Phone List:</p><p>{{phones | json}}</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
