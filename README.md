@@ -1,6 +1,4 @@
 hello-world
 ===========
 
-Just a first repository 
-
-For testing purpose
+Just a repository for testing purpose
